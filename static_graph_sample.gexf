@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:viz="http://www.gexf.net/1.2draft/viz" version="1.2">
+ <meta lastmodifieddate="2019-08-14">
+  <creator>Paul George</creator>
+  <description>A Snake AI Neural Network</description>
+ </meta>
+ <graph defaultedgetype="directed" idtype="string" mode="static">
+  <attributes class="node" mode="static">
+   <attribute id="0" title="weight" type="float"/>
+   <attribute id="1" title="innovation" type="string"/>
+  </attributes>
+  <nodes count="20">
+   <node id="0" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="12" label=""/>
+   <node id="1" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="2" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="3" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="4" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="5" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="6" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="7" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="8" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="9" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="10" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="11" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="13" label=""/>
+   <node id="14" label=""/>
+   <node id="15" label=""/>
+   <node id="16" label="">
+    <viz:shape value="disc"/>
+   </node>
+   <node id="17" label=""/>
+   <node id="18" label=""/>
+   <node id="19" label=""/>
+  </nodes>
+  <edges count="62">
+   <edge id="8fe4036c-be5c-4e8b-939c-a37f07ebd992" source="0" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.7749035"/>
+     <attvalue for="1" value="1"/>
+    </attvalues>
+   </edge>
+   <edge id="a7f1dca9-c8fb-4588-80df-90f577181949" source="0" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.3173692"/>
+     <attvalue for="1" value="16"/>
+    </attvalues>
+   </edge>
+   <edge id="0545a48e-6d0a-4624-adf9-dc64e4694d73" source="0" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-5.5311527"/>
+     <attvalue for="1" value="28"/>
+    </attvalues>
+   </edge>
+   <edge id="6c752302-7ff5-4eb4-937a-a6c5ce25a25d" source="0" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.1501508"/>
+     <attvalue for="1" value="40"/>
+    </attvalues>
+   </edge>
+   <edge id="9d2b23e5-4c6a-4071-9390-d2c1066d1d39" source="1" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.162009"/>
+     <attvalue for="1" value="2"/>
+    </attvalues>
+   </edge>
+   <edge id="7d7f90d4-79c8-4ce0-a39a-d38ba170d8ef" source="1" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.0426097"/>
+     <attvalue for="1" value="17"/>
+    </attvalues>
+   </edge>
+   <edge id="fd1dbd90-2f91-4dc2-8496-108fb3fec37d" source="1" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="8.290311"/>
+     <attvalue for="1" value="29"/>
+    </attvalues>
+   </edge>
+   <edge id="78c2b9a9-7671-4028-b509-9cf8284ed86a" source="1" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-0.02232027"/>
+     <attvalue for="1" value="41"/>
+    </attvalues>
+   </edge>
+   <edge id="a7cc3d06-aec1-4983-a8c6-7f6de41821d5" source="2" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.293021"/>
+     <attvalue for="1" value="3"/>
+    </attvalues>
+   </edge>
+   <edge id="97552add-183f-426c-bfb7-c41add129131" source="2" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="0.039130926"/>
+     <attvalue for="1" value="18"/>
+    </attvalues>
+   </edge>
+   <edge id="0a86d148-f9bf-4eb5-85dd-b997715de9a4" source="2" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-5.4309134"/>
+     <attvalue for="1" value="30"/>
+    </attvalues>
+   </edge>
+   <edge id="c7f65108-9a62-46e1-b688-f1ec2dd0f11d" source="2" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="3.9754417"/>
+     <attvalue for="1" value="42"/>
+    </attvalues>
+   </edge>
+   <edge id="d3866ddf-3e4a-4fb1-a0c4-aa2e86a0046b" source="3" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.2653532"/>
+     <attvalue for="1" value="4"/>
+    </attvalues>
+   </edge>
+   <edge id="16cc45d5-5dee-4726-a9d7-b47785b2382a" source="3" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="7.624983"/>
+     <attvalue for="1" value="13"/>
+    </attvalues>
+   </edge>
+   <edge id="1da824ea-239e-4cb7-a875-0683219884ea" source="3" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="8.466259"/>
+     <attvalue for="1" value="31"/>
+    </attvalues>
+   </edge>
+   <edge id="6a8ab2b6-4ca0-430a-b284-f852c0c9df6b" source="3" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="4.109865"/>
+     <attvalue for="1" value="43"/>
+    </attvalues>
+   </edge>
+   <edge id="397ba71d-7d75-4185-a21d-2ca14810dd7d" source="3" target="16" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-0.4954834"/>
+     <attvalue for="1" value="79"/>
+    </attvalues>
+   </edge>
+   <edge id="a91c6483-97e5-4f31-b71e-1643cb90399d" source="4" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="2.4238968"/>
+     <attvalue for="1" value="5"/>
+    </attvalues>
+   </edge>
+   <edge id="55bd2921-7425-4938-ab4f-19bf9a9945e0" source="4" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="0.17454791"/>
+     <attvalue for="1" value="14"/>
+    </attvalues>
+   </edge>
+   <edge id="2410c925-13d3-4d79-a56c-cd263cb4b0ee" source="4" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-0.11897421"/>
+     <attvalue for="1" value="32"/>
+    </attvalues>
+   </edge>
+   <edge id="c3223ba3-e3d5-4f74-9d65-7cd471b587fb" source="4" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-5.5726433"/>
+     <attvalue for="1" value="44"/>
+    </attvalues>
+   </edge>
+   <edge id="8fd4db6d-44c1-4952-9821-6f8d0f3562db" source="4" target="16" type="directed">
+    <attvalues>
+     <attvalue for="0" value="0.58677447"/>
+     <attvalue for="1" value="425"/>
+    </attvalues>
+   </edge>
+   <edge id="e17467b3-f25d-4ad2-8d09-374d63dce0f7" source="5" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-6.9719534"/>
+     <attvalue for="1" value="6"/>
+    </attvalues>
+   </edge>
+   <edge id="bfc27720-a8d1-4525-a74a-bdd4485479b2" source="5" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.2625544"/>
+     <attvalue for="1" value="15"/>
+    </attvalues>
+   </edge>
+   <edge id="6fe1d3e6-210c-4eab-9715-b1abe74f1033" source="5" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.545976"/>
+     <attvalue for="1" value="33"/>
+    </attvalues>
+   </edge>
+   <edge id="ce8103b9-5f3d-4708-91c5-36ee8f781de1" source="5" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.5608048"/>
+     <attvalue for="1" value="45"/>
+    </attvalues>
+   </edge>
+   <edge id="5371f1ff-9d31-4526-95c4-ad29b831c572" source="6" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.0689123"/>
+     <attvalue for="1" value="7"/>
+    </attvalues>
+   </edge>
+   <edge id="b8684ffd-0e34-4b9c-8bf3-f72ec0f6d044" source="6" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="7.1495953"/>
+     <attvalue for="1" value="19"/>
+    </attvalues>
+   </edge>
+   <edge id="409c31b5-31e9-4de5-9fd4-958f124cbed3" source="6" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.6010301"/>
+     <attvalue for="1" value="25"/>
+    </attvalues>
+   </edge>
+   <edge id="9a5e9e72-c7a9-4919-957f-4661bb6f75ac" source="6" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.8154833"/>
+     <attvalue for="1" value="46"/>
+    </attvalues>
+   </edge>
+   <edge id="333b4e5a-7809-4df8-af6b-c8d4bca263ae" source="6" target="16" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.7178737"/>
+     <attvalue for="1" value="332"/>
+    </attvalues>
+   </edge>
+   <edge id="f9f4c4ad-6027-4a86-9b82-142e4890a172" source="6" target="17" type="directed">
+    <attvalues>
+     <attvalue for="0" value="0.7478945"/>
+     <attvalue for="1" value="898"/>
+    </attvalues>
+   </edge>
+   <edge id="0210b9f3-42e8-4bbb-9cd9-2e17bc095cdd" source="7" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.1188943"/>
+     <attvalue for="1" value="8"/>
+    </attvalues>
+   </edge>
+   <edge id="f2658e04-a73e-4aa5-9cf1-33abdc414be5" source="7" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-3.50223"/>
+     <attvalue for="1" value="20"/>
+    </attvalues>
+   </edge>
+   <edge id="be88f06f-7413-447c-a72a-dd834cfd4386" source="7" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.1903296"/>
+     <attvalue for="1" value="26"/>
+    </attvalues>
+   </edge>
+   <edge id="bdf14fd3-b40f-44ba-b63d-f742cbc6cb1a" source="7" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.2770472"/>
+     <attvalue for="1" value="47"/>
+    </attvalues>
+   </edge>
+   <edge id="42b18078-0308-4861-b9e6-c070996a24ae" source="8" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="3.369606"/>
+     <attvalue for="1" value="9"/>
+    </attvalues>
+   </edge>
+   <edge id="5482c3ca-c2dd-457d-b045-a31072724435" source="8" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.191999"/>
+     <attvalue for="1" value="21"/>
+    </attvalues>
+   </edge>
+   <edge id="dcc54592-f8d1-415b-bec4-038f90e74316" source="8" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.2033575"/>
+     <attvalue for="1" value="27"/>
+    </attvalues>
+   </edge>
+   <edge id="50fcae9c-6512-4577-a9a5-159ffe4ac1db" source="8" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="4.417583"/>
+     <attvalue for="1" value="48"/>
+    </attvalues>
+   </edge>
+   <edge id="68a3c96b-00ff-4df4-b323-310f7535f840" source="9" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="8.360852"/>
+     <attvalue for="1" value="10"/>
+    </attvalues>
+   </edge>
+   <edge id="3c2d536f-4556-47cc-b166-329002e03326" source="9" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="4.209155"/>
+     <attvalue for="1" value="22"/>
+    </attvalues>
+   </edge>
+   <edge id="ba03e6d3-27c2-4c37-9009-e2ac15784bc9" source="9" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="0.84068155"/>
+     <attvalue for="1" value="34"/>
+    </attvalues>
+   </edge>
+   <edge id="7a0ca596-e08e-4457-9e7d-57743a664b3b" source="9" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.9205265"/>
+     <attvalue for="1" value="37"/>
+    </attvalues>
+   </edge>
+   <edge id="384f9226-18dd-4536-b159-1c160fb32028" source="9" target="17" type="directed">
+    <attvalues>
+     <attvalue for="0" value="4.7055902"/>
+     <attvalue for="1" value="91"/>
+    </attvalues>
+   </edge>
+   <edge id="6477f6e7-c26c-4446-a544-8fb5a65b397a" source="9" target="16" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.8029635"/>
+     <attvalue for="1" value="163"/>
+    </attvalues>
+   </edge>
+   <edge id="ef6d69af-1f21-41f5-9b40-0769506dd503" source="9" target="18" type="directed">
+    <attvalues>
+     <attvalue for="0" value="4.500569"/>
+     <attvalue for="1" value="290"/>
+    </attvalues>
+   </edge>
+   <edge id="5237e92b-2b12-41ad-9c7d-acf2c7b481f5" source="10" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.6034255"/>
+     <attvalue for="1" value="11"/>
+    </attvalues>
+   </edge>
+   <edge id="3a56ce16-1ede-4b34-81aa-973fdbfc7dda" source="10" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.8185759"/>
+     <attvalue for="1" value="23"/>
+    </attvalues>
+   </edge>
+   <edge id="33fcd10f-c733-4db3-8b0a-a9db8ac3d1ab" source="10" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.4493523"/>
+     <attvalue for="1" value="35"/>
+    </attvalues>
+   </edge>
+   <edge id="07f2b7e4-9f72-485e-81f5-4b1fb1ec9f0a" source="10" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-0.19969082"/>
+     <attvalue for="1" value="38"/>
+    </attvalues>
+   </edge>
+   <edge id="97a9d9b4-6735-46ff-b93b-03717b9dc834" source="11" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-0.549737"/>
+     <attvalue for="1" value="12"/>
+    </attvalues>
+   </edge>
+   <edge id="43623e0e-3c42-47e3-abdc-d86233641dbc" source="11" target="13" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-0.55331254"/>
+     <attvalue for="1" value="24"/>
+    </attvalues>
+   </edge>
+   <edge id="82db9502-4e25-4ce2-8843-a5a532c23380" source="11" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-3.3266373"/>
+     <attvalue for="1" value="36"/>
+    </attvalues>
+   </edge>
+   <edge id="15154efc-502b-4506-8c5d-18fc8b7558f1" source="11" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.3415325"/>
+     <attvalue for="1" value="39"/>
+    </attvalues>
+   </edge>
+   <edge id="e65e6a87-a3b0-49f1-9429-9b946c617eb0" source="16" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.4675055"/>
+     <attvalue for="1" value="80"/>
+    </attvalues>
+   </edge>
+   <edge id="26e3b855-bcc0-4470-b28f-b4cbc708309a" source="16" target="14" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.4194298"/>
+     <attvalue for="1" value="164"/>
+    </attvalues>
+   </edge>
+   <edge id="f709aa44-6ddf-4b7c-bb4f-706e679a905a" source="16" target="12" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.1549206"/>
+     <attvalue for="1" value="298"/>
+    </attvalues>
+   </edge>
+   <edge id="25220968-4682-4b8d-bad3-ea733c3b1520" source="16" target="19" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.0"/>
+     <attvalue for="1" value="829"/>
+    </attvalues>
+   </edge>
+   <edge id="f303e16d-0b96-4050-b49e-9b46f323b58f" source="17" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-1.6224988"/>
+     <attvalue for="1" value="92"/>
+    </attvalues>
+   </edge>
+   <edge id="697f0ece-397f-4226-8d96-4a795d534d07" source="18" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="1.8861527"/>
+     <attvalue for="1" value="291"/>
+    </attvalues>
+   </edge>
+   <edge id="fd3b9df1-9936-4af8-8896-a5f1649bc26f" source="19" target="15" type="directed">
+    <attvalues>
+     <attvalue for="0" value="-2.4675055"/>
+     <attvalue for="1" value="830"/>
+    </attvalues>
+   </edge>
+  </edges>
+ </graph>
+</gexf>

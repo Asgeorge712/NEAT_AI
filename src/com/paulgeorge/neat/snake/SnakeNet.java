@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 import com.paulgeorge.neat.ConnectionGene;
 import com.paulgeorge.neat.Evaluator;
 import com.paulgeorge.neat.Genome;
+import com.paulgeorge.neat.GraphFileWriter;
 import com.paulgeorge.neat.InnovationGenerator;
 import com.paulgeorge.neat.NeuralNetwork;
 import com.paulgeorge.neat.NodeGene;
@@ -62,8 +63,11 @@ public class SnakeNet {
 			log.debug("Fittest Genome score: " + fittest.getFitness());
 		}
 
-		log.debug("The Fittest genome had a score of: " + fittest.getFitness());
+		log.debug("The Fittest genome had a score of: " + fittest.getFitness() + "  Number of Nodes: "
+				+ fittest.getNodes().size() + "  Number of Connections: " + fittest.getConnections().size());
 		printer.showGenome(fittest, "Fittest Genome");
+		GraphFileWriter writer = new GraphFileWriter(fittest);
+		writer.write("fittest1.gexf");
 
 	}
 
