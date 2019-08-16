@@ -270,12 +270,20 @@ public class Genome {
 		while (!validPair) {
 			numTries++;
 			if (numTries > 100) {
-				System.out.println("Tried 100 times to find a connection that doesn't exist.  Giving up");
+				log.debug("Tried 100 times to find a connection that doesn't exist.  Giving up");
 				return;
 			}
 
 			node1 = nodes.get(r.nextInt(nodes.size()));
+			if (node1 == null) {
+				log.error("******************** node1 is null!!!!");
+				return;
+			}
 			node2 = nodes.get(r.nextInt(nodes.size()));
+			if (node2 == null) {
+				log.error("******************** node2 is null!!!!");
+				return;
+			}
 			boolean badPair = false;
 			if (connectionExists(node1.getId(), node2.getId())) {
 				// Bad

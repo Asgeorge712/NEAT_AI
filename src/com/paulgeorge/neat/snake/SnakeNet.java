@@ -1,9 +1,13 @@
 package com.paulgeorge.neat.snake;
 
 import java.awt.Point;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import javax.xml.stream.XMLStreamException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 import com.paulgeorge.neat.ConnectionGene;
 import com.paulgeorge.neat.Evaluator;
 import com.paulgeorge.neat.Genome;
-import com.paulgeorge.neat.GraphFileWriter;
+import com.paulgeorge.neat.GraphFileUtils;
 import com.paulgeorge.neat.InnovationGenerator;
 import com.paulgeorge.neat.NeuralNetwork;
 import com.paulgeorge.neat.NodeGene;
@@ -31,7 +35,10 @@ public class SnakeNet {
 		log.debug("Starting SnakeNet main");
 		// Create the initial Genome with 12 inputs and 4 outputs
 
-		Genome genome = createSemiSmartGenome();
+		// Genome genome = createSemiSmartGenome();
+		File dir = new File(".");
+		log.debug("Current dir is: " + dir.getAbsolutePath());
+		Genome genome = getGenomeFromFile(dir.getAbsolutePath() + "\\fittest2.json");
 
 		GenomePrinter printer = new GenomePrinter();
 		printer.showGenome(genome, "First Genome");
@@ -48,7 +55,8 @@ public class SnakeNet {
 		};
 
 		Genome fittest = null;
-		for (int x = 0; x < 40; x++) {
+		int fittestGeneration = 0;
+		for (int x = 0; x < 100; x++) {
 			evaluator.evaluate();
 			log.debug("************************** ");
 			log.debug(" Generation: " + x);
@@ -59,15 +67,17 @@ public class SnakeNet {
 
 			if (x == 0 || evaluator.getHighestFitness() > fittest.getFitness()) {
 				fittest = evaluator.getFittestGenome();
+				fittestGeneration = x;
 			}
-			log.debug("Fittest Genome score: " + fittest.getFitness());
+			log.debug("Fittest Genome score: " + fittest.getFitness() + " is from Gen " + fittestGeneration);
 		}
 
 		log.debug("The Fittest genome had a score of: " + fittest.getFitness() + "  Number of Nodes: "
-				+ fittest.getNodes().size() + "  Number of Connections: " + fittest.getConnections().size());
+				+ fittest.getNodes().size() + "  Number of Connections: " + fittest.getConnections().size()
+				+ "  from Generation: " + fittestGeneration);
 		printer.showGenome(fittest, "Fittest Genome");
-		GraphFileWriter writer = new GraphFileWriter(fittest);
-		writer.write("fittest1.gexf");
+		// writer.write("fittest1.gexf");
+		GraphFileUtils.writeGenomeToFile(fittest, "fittest3.json");
 
 	}
 
@@ -96,18 +106,8 @@ public class SnakeNet {
 		Direction d = null;
 		while (!gameEnded) {
 			d = calculateDirection(genome);
-			// log.debug("Moving snake: " + d);
 			doAction(d);
 			numMoves++;
-			// if (gameEnded) {
-			// log.debug("Game ended after " + numMoves + " moves. Score was: " +
-			// board.score);
-			// }
-
-//			try {
-//				Thread.sleep(100);
-//			} catch (InterruptedException e) {
-//			}
 		}
 		return board.score + 0f;
 	}
@@ -301,6 +301,17 @@ public class SnakeNet {
 			System.err.println("ERROR Finding direction!!!!!");
 		}
 		return d;
+	}
+
+	/***************************************************************************************************
+	 * 
+	 * @param fileName
+	 * @return
+	 * @throws IOException
+	 * @throws XMLStreamException
+	 ***************************************************************************************************/
+	private static Genome getGenomeFromFile(String fileName) {
+		return GraphFileUtils.readGenomeFromFile(fileName);
 	}
 
 	/****************************************************************************
